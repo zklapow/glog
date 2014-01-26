@@ -406,6 +406,10 @@ func init() {
 	go logging.flushDaemon()
 }
 
+func SetLogToStderr(yes bool) {
+  logging.toStderr = yes
+}
+
 // Flush flushes all pending log I/O.
 func Flush() {
 	logging.lockAndFlushAll()
